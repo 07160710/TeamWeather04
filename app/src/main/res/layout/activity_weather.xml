@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="请输入省或省市：" />
+        <AutoCompleteTextView
+            android:id="@+id/search_name"
+            android:background="@drawable/coner_white_rec"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            android:text="广州"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="140dp"
+            android:height="200dp"/>
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="80dp"
+            android:layout_marginRight="8dp"
+            android:text="查询天气"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
