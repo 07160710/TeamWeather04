@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.administrator.teamweather04.utils.PinyinUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -19,6 +23,7 @@ public class WeatherActivity extends AppCompatActivity {
     private Button mSearch;
     private String db_name = "weather";
     private String db_path = "data/data/com.example.administrator.teamweather04/database/";
+    private TextView mTextTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,17 @@ public class WeatherActivity extends AppCompatActivity {
         copydb();
         mCityname = (AutoCompleteTextView) findViewById(R.id.search_name);
         mSearch = (Button) findViewById(R.id.search_btn);
+        mTextTV = (TextView) findViewById(R.id.tv1);
+        mSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String city = mCityname.getText().toString();
+                //测试用的
+                String citypinyin = PinyinUtils.getPingYin(city);
+                mTextTV.setText(citypinyin);
+            }
+        });
+
 
     }
     @Override
