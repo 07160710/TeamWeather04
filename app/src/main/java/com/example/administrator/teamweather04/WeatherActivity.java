@@ -81,7 +81,7 @@ public class WeatherActivity extends AppCompatActivity implements Runnable{
                 th.start();
             }
         });
-        //省
+        //省市
         GetPro getPro = new GetPro();
         getPro.start();
         //

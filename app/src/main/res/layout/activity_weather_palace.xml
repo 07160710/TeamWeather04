@@ -1,9 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.administrator.teamweather04.WeatherPalaceActivity">
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="请输入省或省市：" />
+        <AutoCompleteTextView
+            android:id="@+id/cityname"
+            android:background="@drawable/coner_white_rec"
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:layout_marginRight="8dp"
+            android:inputType="text"
+            android:text="广州"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="140dp"
+            android:height="200dp"/>
+        <Button
+            android:id="@+id/search"
+            android:layout_width="80dp"
+            android:layout_marginRight="8dp"
+            android:text="查询天气"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/show_weather"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:id="@+id/tv0"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="60dp"
+            android:layout_below="@id/tv"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/weilai"
+            android:layout_above="@+id/gl"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <GridLayout
+            android:id="@+id/gl"
+            android:layout_below="@id/tv0"
+            android:orientation="horizontal"
+            android:columnCount="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_columnWeight="1"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </GridLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/ganmao"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Design by 第4组"/>
+    </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

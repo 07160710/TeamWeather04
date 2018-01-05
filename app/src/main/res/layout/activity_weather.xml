@@ -39,5 +39,15 @@
         android:layout_weight="1"
         android:orientation="vertical">
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Design by 第4组"/>
+    </LinearLayout>
 
 </LinearLayout>
